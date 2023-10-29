@@ -1,31 +1,31 @@
 <%--
   Created by IntelliJ IDEA.
-  User: sorra
-  Date: 28/10/2566
-  Time: 22:47
+  User: jiraplxs
+  Date: 27/10/2023 AD
+  Time: 16:30
   To change this template use File | Settings | File Templates.
 --%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>AddRemoveStudent</title>
 </head>
 <body>
-<h1><%= "SitSpaceManagement" %></h1>
-PAGE: <a href="AddRemoveStudent.jsp">ADD/REMOVE Student</a> | <a href="AllData.jsp">ALL DATA</a> <br>
-<h3>Add Student Data</h3>
-    <form action="Add" method="post">
-        &nbsp;&nbsp;&nbsp;ID: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="id">&nbsp;Name: <input type="text" name="name"> <br><br>
-        &nbsp;&nbsp;&nbsp;Score: <input type="text" name="score"> <br><br>
-        &nbsp;&nbsp;&nbsp;<input type="submit" value="ADD">
-    </form>
-<hr>
-<h3>Remove Student </h3>
-<form action="Remove" method="post">
-    &nbsp;&nbsp;&nbsp;ID: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="id">&nbsp;&nbsp;<input type="submit" value="REMOVE">
-</form>
-<hr>
-<c:if test="${message != null}"> <p style="color: red">${message}</p></c:if>
+        <h1>SitSpaceManagement</h1>
+        <h3>PAGE : <a href="AddServlet">ADD/REMOVE Student</a> | <a href="./AllData.jsp">All Data</a></h3>
+        <form action="AddServlet" method="post">
+            <h3>Add Student Data</h3>
+            <p>ID: <input type="text" name="id"></p><p>Name: <input type="text" name="name"></p>
+            <p>Score: <input type="text" name="score"></p>
+            <input type="submit" value="ADD">
+            <hr>
+        </form>
+        <form action="RemoveServlet" method="post">
+            <h3>ID: <input type="text" name="id"> <input type="submit" value="REMOVE"></h3>
+            <hr>
+        </form>
+        <%--  ${} called el ไว้เขียน java อย่างง่าย / เรียก key ที่อยู่ใน AddServlet--%>
+        <p> ${addedStatus} </p>
+        <p> ${removedStatus} </p>
 </body>
 </html>

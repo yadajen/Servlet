@@ -5,7 +5,9 @@
     <title>JSP - Hello World</title>
 </head>
 <body>
-<h1><%= "SitSpaceManagement" %></h1>
-PAGE: <a href="AddRemoveStudent.jsp">ADD/REMOVE Student</a> | <a href="AllData.jsp">ALL DATA</a>
+<h1><%= "Hello World!" %>
+</h1>
+<br/>
+<a href="hello-servlet">Hello Servlet</a>
 </body>
 </html>
